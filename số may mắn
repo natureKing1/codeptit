@@ -1,0 +1,13 @@
+N=input()
+so4=0
+so7=0
+for i in N:
+    if i=="4":
+        so4+=1
+    elif i=="7":
+        so7+=1
+if so4+so7==4 or so4+so7==7:
+    print("YES")
+else:
+    print("NO")
+
