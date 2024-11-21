@@ -1,0 +1,19 @@
+def so(n):
+    lst=[]
+    tmp=0
+    for i in n:
+        if i.isdigit():
+            tmp=tmp*10+int(i)
+        else:
+            if tmp:
+               lst.append(tmp)
+               tmp=0
+    if tmp:
+        lst.append(tmp)
+
+    return lst
+t=int(input())
+for _ in range(t):
+    n=input()
+    res=so(n)
+    print(min(res))
