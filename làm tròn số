@@ -1,0 +1,13 @@
+import math
+t=int(input())
+for i in range(t):
+    n=int(input())
+    mul=10
+    while n>mul:
+        if n%mul>=(mul//2):
+
+            n=(n//mul+1)*mul
+        else:
+            n=(n//mul * mul)
+        mul*=10
+    print(n)
