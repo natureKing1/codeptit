@@ -1,0 +1,6 @@
+n=int(input())
+lst=[]
+for _ in range(n):
+    loi_chuc=input()
+    lst.append(loi_chuc)
+print(len(set(lst)))
