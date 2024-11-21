@@ -1,0 +1,46 @@
+import math
+
+def prime(n):
+    if n < 2:
+        return False
+    for i in range(2, math.isqrt(n) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+def rev(n):
+    
+    rev_num = 0
+    while n != 0:
+        rev_num = rev_num * 10 + n % 10
+        n //= 10
+    return rev_num
+
+def tong(n):
+   
+    total = 0
+    while n != 0:
+        total += n % 10
+        n //= 10
+    return total
+
+def check_prime_digits(n):
+    
+    while n != 0:
+        digit = n % 10
+        if not prime(digit):  
+            return False
+        n //= 10
+    return True
+
+if __name__ == "__main__":
+    T = int(input())  
+    for _ in range(T):
+        N = int(input())  
+        reversed_N = rev(N)  
+        total_sum = tong(N)  
+        # Kiểm tra các điều kiện của Perfect Prime
+        if prime(N) and prime(reversed_N) and prime(total_sum) and check_prime_digits(N):
+            print("Yes")
+        else:
+            print("No")
