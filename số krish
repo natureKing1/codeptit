@@ -1,0 +1,17 @@
+import math
+import math
+
+def krish(n):
+    tong = 0
+    for i in n:
+        tong += math.factorial(int(i))
+    return tong
+
+if __name__ == "__main__":
+    t = int(input())
+    for _ in range(t):
+        n = input()
+        if krish(n) == int(n):  
+            print("Yes")
+        else:
+            print("No")
